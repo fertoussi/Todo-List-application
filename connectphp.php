@@ -11,7 +11,7 @@ $mysqli= new mysqli ($dbhost, $dbuser,$dbpass, $dbname);
   }
     printf( "Connect successful <br/>");
   /* para creacion */ 
-$sql ="create table test-connection (id int , name varchar(50), fullname varchar(50))";
+$sql ="create table testConnection (id int , name varchar(50), fullname varchar(50))";
   if($mysqli ->query($sql)){
     printf("Create table perfectly ");
   }
