@@ -1,0 +1,228 @@
+body{ 
+  font-weight: 400;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  background: radial-gradient(2224px at 10.6% 8.8%, rgb(255, 255, 255) 0%, rgb(93, 180, 0) 100.2%);
+}
+.header > h2 {
+  color: #3c6aff;
+  text-align: center;
+}
+#task-container {
+  display: flex;
+}
+ 
+#input-button{
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.4s;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2eea47;
+  margin-top: 13px;
+}
+#input-button:hover {
+  background-color: #9eb7fd; 
+} 
+  
+hr{
+  border: 1px solid #0033ff;
+}
+  
+.header{
+  margin: 24px;
+  font-size: 20px;
+  text-align: center;
+}
+  
+h1{
+  margin-bottom: 20px; 
+}
+  
+ul{
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  text-align:left;
+}
+  
+li {
+  border: 1px solid white;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+  margin-top: 10px;
+}
+li.progress {
+   background-color: aqua;
+}
+
+li.done{
+  background-color: #2e60ea;
+}
+li.to_do{
+  background-color: bisque;
+}
+.update-task, .remove-task, .complete-btn{
+  float: right;
+  color:crimson;
+  cursor: pointer;
+  margin: 3px 5px;
+  border: none;
+  padding: 3px 5px;
+  background: none;  
+} 
+.update-task{
+  content: url(update.png);
+  width: 19px;
+  margin-top: auto;
+}
+
+.remove-task{
+  content: url(delete.png);
+  width: 19px;
+  margin-top: auto;
+}
+ 
+.completed {
+  text-decoration: line-through;
+  color: gray;
+  border: 1px solid gray;
+}
+
+#form {
+    display: inline-grid;
+}
+#form input, select {
+  margin-top: 11px;
+  margin-bottom: 9px;
+  width: auto;
+  border-radius: 10px;
+  height: 30px;
+}
+
+input#input-desc {
+  height: 75px;
+}
+#input-search {
+  background-image: url(search.png);
+  background-position: 3px 8px;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  padding: 12px 20px 12px 40px;
+  margin-bottom: 4px;
+  background-size: 30px;
+  border-radius: 40px;
+  float: left;
+  width: 130px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  margin-top: 0;
+  &:focus {
+   width: auto;
+  }
+}
+
+.left {
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  -webkit-animation-name: left;
+          animation-name: left;
+  -webkit-animation-duration: .8s;
+          animation-duration: .8s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+  margin-top: -50px;
+}
+
+.animation_text {
+-webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+#right {
+  flex: 1;
+  background-color: black;
+  transition: 1s;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#right:before{
+  content: '';
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+}
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 30%, 0);
+    transform: translate3d(0, 30%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 30%, 0);
+    transform: translate3d(0, 30%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes left {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    padding: 20px 40px;
+    width: 500px;
+  }
+}
+@keyframes left {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    padding: 20px 40px;
+    width: 500px;
+  }
+}
+
+#input-search {
+  width: 130px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  margin-top: 0;
+}
+
+#input-search:focus {
+  width: auto;
+}
